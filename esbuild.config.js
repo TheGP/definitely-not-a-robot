@@ -3,7 +3,7 @@ const esbuild = require("esbuild");
 async function build() {
   esbuild
     .build({
-      entryPoints: ["./src/index.ts"],
+      entryPoints: ["./src/HumanBrowser.ts"],
       bundle: true,
       platform: "node",
       target: "node14",
