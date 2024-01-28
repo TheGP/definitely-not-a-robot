@@ -1,10 +1,10 @@
-import { Browser, Page, BrowserLaunchArgumentOptions, KeyInput } from 'puppeteer'
-import puppeteer from 'puppeteer-extra'
-import StealthPlugin from 'puppeteer-extra-plugin-stealth'
+import puppeteer, { Browser, Page, BrowserLaunchArgumentOptions, KeyInput } from 'puppeteer'
+//import puppeteer from 'puppeteer-extra'
+//import StealthPlugin from 'puppeteer-extra-plugin-stealth'
 import { drawBezierMovement, drawBezierMovementWithJitter, humanMouseMove } from './mouseUtils'
 import { MovementOptions } from './types'
 
-puppeteer.use(StealthPlugin())
+//puppeteer.use(StealthPlugin())
 
 const DEFAULT_VIEWPORT = {
     width: 1280,
@@ -30,7 +30,7 @@ class HumanBrowser {
 
     constructor(private puppeteerBrowser = puppeteer) {
         this.puppeteerBrowser = puppeteerBrowser
-        this.puppeteerBrowser.use(StealthPlugin())
+        //this.puppeteerBrowser.use(StealthPlugin())
     }
 
     async launch(options?: BrowserLaunchArgumentOptions) {
